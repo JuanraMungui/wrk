@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Alex Rivera — Desarrollador Full-Stack especializado en interfaces modernas y aplicaciones web de alto rendimiento." />
+  <title>Alex Rivera · Full-Stack Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <div id="scroll-progress"></div>
+  <canvas id="bg-canvas"></canvas>
+  <div id="toast"></div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">AR.dev</a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-label"><span></span>Disponible para proyectos</p>
+          <h1 class="hero-name">
+            <div>Hola, soy</div>
+            <div class="line-2">Alex Rivera</div>
+          </h1>
+          <p class="hero-title">
+            <span class="typed-text"></span><span class="cursor-blink"></span>
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary"><span>Ver Proyectos</span><span>→</span></a>
+            <a href="#contact" class="btn btn-outline">Contactar</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="profile-frame">
+            <div class="profile-ring"></div>
+            <div class="profile-img">
+              <img src="images/avatar.svg" alt="Alex Rivera — Full-Stack Developer" />
+            </div>
+            <div class="profile-badge">
+              <div class="status-dot"></div>
+              <span>Open to work</span>
+            </div>
+            <div class="floating-tag tag-1">⚡ React &amp; Vue</div>
+            <div class="floating-tag tag-2">🛡 Node.js API</div>
+            <div class="floating-tag tag-3">🎨 UI Design</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Sobre mí</p>
+        <h2 class="section-title">Quién soy &amp; qué hago</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-stats reveal">
+          <div class="stat-card">
+            <div class="stat-value counter" data-count="5" data-suffix="+">0+</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value counter" data-count="42" data-suffix="+">0+</div>
+            <div class="stat-label">Proyectos entregados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value counter" data-count="18" data-suffix="">0</div>
+            <div class="stat-label">Clientes satisfechos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value counter" data-count="99" data-suffix="%">0%</div>
+            <div class="stat-label">Tasa de entrega a tiempo</div>
+          </div>
+        </div>
+        <div class="about-bio reveal">
+          <p>Soy <strong>Alex Rivera</strong>, desarrollador full-stack con más de 5 años de experiencia creando aplicaciones web que combinan alto rendimiento con interfaces de usuario memorables.</p>
+          <p>Mi enfoque abarca desde la arquitectura de APIs RESTful y GraphQL en el backend, hasta la construcción de componentes React y Vue accesibles y animados en el frontend.</p>
+          <p>Trabajo principalmente con empresas de tecnología, startups y agencias creativas que buscan <strong>soluciones digitales de primer nivel</strong>.</p>
+          <div class="skills-grid">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Portafolio</p>
+        <h2 class="section-title">Proyectos destacados</h2>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(0,212,255,0.1);color:#00d4ff;">⚡</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" class="project-link" title="Demo"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">NexaDash</h3>
+            <p class="project-desc">Plataforma de analítica en tiempo real para SaaS. Incluye gráficas interactivas, WebSockets para datos en vivo y sistema de permisos granular por roles.</p>
+          </div>
+          <div class="project-footer">
+            <span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">WebSocket</span><span class="tech-tag">PostgreSQL</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(123,47,255,0.1);color:#7b2fff;">🛒</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" class="project-link" title="Demo"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">AgroMarket</h3>
+            <p class="project-desc">Marketplace B2B para productores agrícolas y distribuidores con pagos Stripe, chat en tiempo real y sistema de logística con seguimiento de envíos.</p>
+          </div>
+          <div class="project-footer">
+            <span class="tech-tag">Vue.js</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Stripe</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(255,45,120,0.1);color:#ff2d78;">🤖</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" class="project-link" title="Demo"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">ChatBot Studio</h3>
+            <p class="project-desc">Constructor visual no-code para chatbots empresariales con flujos drag &amp; drop, integración con LLMs y despliegue en WhatsApp, web y Slack.</p>
+          </div>
+          <div class="project-footer">
+            <span class="tech-tag">React</span><span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">OpenAI</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(0,255,136,0.1);color:#00ff88;">📡</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" class="project-link" title="Demo"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">PulseAPI</h3>
+            <p class="project-desc">Herramienta open source de monitoreo de APIs. Comprueba uptime, latencia y alertas por email/Slack con dashboard de métricas históricas.</p>
+          </div>
+          <div class="project-footer">
+            <span class="tech-tag">Node.js</span><span class="tech-tag">Redis</span><span class="tech-tag">Chart.js</span><span class="tech-tag">Docker</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(255,165,0,0.1);color:#ffa500;">📱</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" class="project-link" title="Demo"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">EduFlow</h3>
+            <p class="project-desc">LMS mobile-first para instituciones educativas con aulas virtuales, quizzes adaptativos, reportes de progreso y gamificación con insignias.</p>
+          </div>
+          <div class="project-footer">
+            <span class="tech-tag">React Native</span><span class="tech-tag">GraphQL</span><span class="tech-tag">AWS S3</span><span class="tech-tag">PostgreSQL</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon" style="background:rgba(0,212,255,0.08);color:#00d4ff;">🗺️</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" class="project-link" title="Demo"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">GeoRoute</h3>
+            <p class="project-desc">Optimizador de rutas de entrega para flotas con algoritmos multi-parada, mapa interactivo Leaflet.js y estimación de tiempos en tiempo real.</p>
+          </div>
+          <div class="project-footer">
+            <span class="tech-tag">Leaflet.js</span><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">Dijkstra</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Habilidades técnicas</p>
+        <h2 class="section-title">Stack &amp; Dominio</h2>
+      </div>
+      <div class="skills-bars reveal">
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">JavaScript / TypeScript</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">React / Next.js</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Node.js / Express</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Vue.js / Nuxt</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Python / FastAPI</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">PostgreSQL / MongoDB</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Docker / AWS</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">UI/UX &amp; Figma</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-label">Contacto</p>
+        <h2 class="section-title">Trabajemos juntos</h2>
+      </div>
+      <div class="contact-wrapper">
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="name">Nombre completo</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Correo electrónico</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Mensaje</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Cuéntame sobre tu proyecto o idea..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            <span>Enviar Mensaje</span><span>→</span>
+          </button>
+        </form>
+        <div class="contact-links reveal">
+          <a href="mailto:alex@rivera.dev" class="contact-link">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            alex@rivera.dev
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener" class="contact-link">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="contact-link">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" class="contact-link">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @alexrdev
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Diseñado &amp; construido con <span>♥</span> por <span>Alex Rivera</span> · 2025</p>
+      <p style="margin-top:0.4rem;opacity:0.5;">HTML · CSS · JavaScript · Sin frameworks externos</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
